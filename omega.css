@@ -1,0 +1,288 @@
+/* ------- top and bottom bars ------- */
+#mmonetbar { display: none !important; }
+#siteFooter { display: none !important; }
+
+/* ------- still darkmatter picture ------- */
+div.resourceIcon.darkmatter { background-position: -192px -160px; }
+
+/* ------- removes ugly yellow from the menu ------- */
+.premiumHighligt > span { color: inherit !important; }
+
+/* ------- magnifies the clock ------- */
+li.OGameClock > span {
+   cursor: default;
+   /* cursor: pointer; ~~> not ready yet */
+   position: fixed;
+   top: 2px;
+   right: 1em;
+   z-index: 10;
+   color: #f1f1f1;
+   font-size: medium;
+   font-weight: normal;
+   display: inline-block;
+   margin: 2px 0;
+   padding: 0.3ex 1ex 0.2ex;
+   border: solid thin black;
+   border-width: 1px 2px 2px;
+   border-radius: 2px;
+   background: linear-gradient(to bottom,
+         #0c0f13 1px,
+         black 1px,
+         black 2px,
+         transparent 2px),
+      linear-gradient(to top,
+         #141e26 1px,
+         #10181f 1px,
+         #10181f 50%,
+         #141e26 50%);
+   vertical-align: top;
+   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ------- clock options ------- */
+#watilin-clock-options {
+   display: none;
+   position: fixed;
+   right: 1em;
+   top: 3.5em;
+   z-index: 11;
+   background: #0d1014;
+   border: solid thin black;
+   border-radius: 2px;
+   box-shadow: 0 0 1ex rgba(0, 0, 0, 0.4);
+   font-size: 1em;
+}
+#watilin-clock-options h2 {
+   cursor: pointer;
+   color: #6f9fc8;
+   font-weight: bold;
+   padding: 1ex 3em;
+   text-align: center;
+   background: linear-gradient(to bottom,
+         #0c0f13 1px,
+         black 1px,
+         black 2px,
+         transparent 2px),
+      linear-gradient(to top,
+         #141e26 1px,
+         #10181f 1px,
+         #10181f 50%,
+         #141e26 50%);
+   border: solid thin black;
+   border-width: 0 thin thin;
+}
+#watilin-clock-options section {
+   margin: 1ex;
+   font-size: smaller;
+   padding: 1ex;
+   border: solid thin #171d23;
+   border-radius: 2px;
+   background: linear-gradient(0deg, #101419, #171d23)
+}
+#watilin-clock-options h3 {
+   font-weight: bold;
+   color: #6f9fc8;
+   margin-bottom: 1ex;
+}
+#watilin-clock-options input[type=number] {
+   text-align: center;
+   width: 2em;
+   font-size: larger;
+   border: solid thin #364657;
+   border-radius: 3px;
+   background: #181f26;
+   color: #f1f1f1;
+}
+
+/* ------- emphasizes accesskeys ------- */
+span.watilin-accesskey {
+   color: white !important;
+   text-shadow: 0 0 3px cyan;
+}
+
+/* ------- replaces some side menu pictures ------- */
+span.menu_icon div.watilin-menuImage.watilin-importexport {
+   background-position: 0 0;
+}
+span.menu_icon div.watilin-menuImage.watilin-importexport.highlighted {
+   background-position: 0 -27px;
+}
+span.menu_icon a:hover div.watilin-menuImage.watilin-importexport,
+span.menu_icon a:active div.watilin-menuImage.watilin-importexport,
+span.menu_icon div.watilin-menuImage.watilin-importexport.active {
+   background-position: 0 -54px;
+}
+span.menu_icon div.watilin-menuImage.watilin-messages {
+   background-position: -27px 0;
+}
+span.menu_icon div.watilin-menuImage.watilin-messages.highlighted {
+   background-position: -27px -27px;
+}
+
+/* ------- adds numbers to planets ------- */
+#planetList.watilin-planetKeys { counter-reset: planets; }
+#planetList.watilin-planetKeys div.smallplanet { position: relative; }
+#planetList.watilin-planetKeys div.smallplanet:before {
+   counter-increment: planets;
+   content: counter(planets);
+   display: block;
+   position: absolute;
+   bottom: 1.5ex;
+   left: 1ex;
+   background: black linear-gradient(to bottom, black, #222);
+   color: #9c0;
+   border: solid thin #680;
+   border-radius: 2px;
+   box-shadow: 0 0 2px black;
+   font-size: smaller;
+   padding: 0 0.5ex;
+   cursor: pointer;
+}
+
+/* ------- accesskeys of the missions page ------- */
+#missions li.on a { position: relative; }
+#missions li.on a:before {
+   display: block;
+   position: absolute;
+   bottom: -0.5ex;
+   left: -0.5ex;
+   background: black linear-gradient(to bottom, black, #222);
+   color: #ec0;
+   border: solid thin #a90;
+   border-radius: 2px;
+   box-shadow: 0 0 2px black;
+   font-size: smaller;
+   padding: 0 0.5ex;
+   cursor: pointer;
+}
+#missions li.on a#missionButton15:before { content: 'X'; }
+#missions li.on a#missionButton7:before { content: 'C'; }
+#missions li.on a#missionButton8:before { content: 'R'; }
+#missions li.on a#missionButton3:before { content: 'T'; }
+#missions li.on a#missionButton4:before { content: 'S'; }
+#missions li.on a#missionButton6:before { content: 'E'; }
+#missions li.on a#missionButton5:before { content: 'D'; }
+#missions li.on a#missionButton1:before { content: 'A'; }
+#missions li.on a#missionButton2:before { content: 'G'; }
+#missions li.on a#missionButton9:before { content: 'U'; }
+
+/* ------- makes focus visible on messages links ------- */
+td.subject a:focus {
+   outline-color: inherit;
+   outline-style: dotted;
+   outline-width: thin;
+   outline-offset: 0;
+}
+
+/* ------- planet information tooltips ------- */
+section.watilin-tooltip {
+   position: absolute;
+   font-size: smaller;
+   color: #aaa;
+   background-color: #101419;
+   background-image:
+      linear-gradient(to bottom, #172023, rgba(16,20,25,0.3)),
+      repeating-linear-gradient(-45deg, black 0, transparent 1px,
+         transparent 2px, black 3px);
+   border: solid thin #460;
+   border-radius: 3px;
+   box-shadow: 0 0 7px black;
+   padding: 1ex;
+   z-index: 100;
+}
+section.watilin-tooltip h2 {
+   font-weight: bold;
+   margin-bottom: 1ex;
+}
+section.watilin-tooltip dd {
+    border-bottom: dotted thin #460;
+    padding-bottom: 0.6ex;
+    margin-bottom: 0.6ex;
+}
+
+/* ------- script guide ------- */
+#watilin-guide-button {
+   display: none; /* until the guide is ready to be released */
+   position: absolute;
+   left: 81px;
+   top: 115px;
+   padding: 2px 6px;
+   font-size: 9px;
+   text-decoration: none;
+   background: black;
+   color: #9c0;
+   border: solid thin #9c0;
+   cursor: pointer;
+}
+#watilin-guide-button:hover {
+   border-color: black;
+   color: black;
+   background: #9c0;
+}
+#watilin-guide {
+   display: none;
+   position: relative;
+   z-index: 100;
+   left: 0;
+   top: 0;
+   margin: 3em auto;
+   padding: 0;
+   width: 61.8%;
+   max-width: 100ex;
+   height: 90%;
+   border: solid thin #112;
+   box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
+}
+#watilin-guide h2 {
+   text-align: center;
+   background-image:
+      /* glowing blue */
+      radial-gradient(
+         rgba(100, 210, 255, 0.2) 10%,
+         rgba(0, 0, 0, 0)
+      ),
+      /* shifted disc */
+      radial-gradient(
+         rgba(190, 230, 255, 0.05) 62.25%,
+         rgba(0, 0, 0, 0.05) 62.5%,
+         rgba(0, 0, 0, 0.4) 62.75%,
+         rgba(0, 0, 0, 0.4) 63%,
+         rgba(0, 0, 0, 0) 63.25%
+      ),
+      /* horizontal shading */
+      linear-gradient(to bottom,
+         #222 0,
+         #111 50%,
+         black 50%,
+         #111
+      );
+   background-position:
+      center,
+      center 80%,
+      center;
+   background-size:
+      100% 100%,
+      100% 2100%,
+      100% 100%;
+   text-shadow: 0 0 0.3ex #089;
+   margin: 0;
+   height: 1.8em;
+   line-height: 1.8em;
+   border-bottom: solid thin #101418;
+}
+#watilin-guide-scroller {
+   overflow: auto;
+   position: relative;
+   width: 100%;
+   background: #080808;
+}
+#watilin-guide-wrapper {
+   margin: 1ex;
+   border-radius: 0.5ex;
+   box-shadow: 0 0 1ex black;
+   padding: 1em;
+   background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.6)),
+      url("http://gf2.geo.gfsrv.net/cdn4a/3bded776b9088c427d7d4567a3f9a6.png") center;
+}
+#watilin-guide-wrapper *:first-child { margin-top: 0; }
+#watilin-guide-wrapper *:last-child { margin-bottom: 0; }
